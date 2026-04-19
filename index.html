@@ -3,28 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Friziera pieraksts</title>
+
+    <!-- CSS pieslēgšana -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="card">
     <h1>Friziera pieraksts</h1>
 
-    <p>Izvēlies pakalpojumu un pieraksties pie friziera.</p>
+    <input type="text" id="name" placeholder="Tavs vārds">
 
-    <div class="container">
-        <label for="service">Izvēlies pakalpojumu:</label>
-        <select id="service">
-            <option value="">-- Izvēlies --</option>
-            <option value="griesana">Matu griešana</option>
-            <option value="krasosana">Matu krāsošana</option>
-            <option value="ieveidošana">Matu ieveidošana</option>
-        </select>
+    <select id="service">
+        <option value="">Izvēlies pakalpojumu</option>
+        <option value="10">Matu griešana - 10€</option>
+        <option value="15">Krāsošana - 15€</option>
+        <option value="8">Bārdas kopšana - 8€</option>
+    </select>
 
-        <button id="bookBtn">Rezervēt</button>
+    <input type="date" id="date">
 
-        <p id="result"></p>
-    </div>
+    <button onclick="reserve()">Rezervēt</button>
 
-    <script src="script.js"></script>
+    <p id="result"></p>
+</div>
+
+<!-- JavaScript pieslēgšana -->
+<script src="script.js"></script>
+
 </body>
 </html>

@@ -1,34 +1,68 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fdf2f8;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #ffe4ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Karte */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 350px;
     text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    animation: fadeIn 0.8s ease;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
 }
 
 h1 {
-    color: #be185d;
+    font-family: 'Playfair Display', serif;
+    color: #d63384;
 }
 
-.container {
-    margin-top: 20px;
+/* Input un select */
+select, input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
 }
 
-select, button {
-    padding: 8px;
-    margin: 10px;
-}
-
+/* Poga */
 button {
-    background-color: #be185d;
+    background: #d63384;
     color: white;
     border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #9d174d;
+    background: #b0256a;
 }
 
+/* Rezultāts */
 #result {
     margin-top: 15px;
     font-weight: bold;
+}
+
+/* Animācija */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
 }
